@@ -38,4 +38,16 @@ export const Container = styled.section`
       font-weight: 500;
     }
   }
+  @media (max-width: 1100px) {
+    width: 90%;
+  }
+  @media (max-width: 700px) {
+    .details {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+    .detail-section {
+      font-size: smaller;
+    }
+  }
 `;

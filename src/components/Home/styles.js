@@ -16,4 +16,9 @@ export const Container = styled.main`
     color: white;
     background-image: url(${bg});
   }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
 `;

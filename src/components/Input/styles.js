@@ -29,4 +29,7 @@ export const Container = styled.div`
       align-self: center;
     }
   }
+  @media (max-width: 700px) {
+    width: 80%;
+  }
 `;
