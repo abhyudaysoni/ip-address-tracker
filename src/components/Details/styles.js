@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  width: 80%;
+  width: 1000px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -39,9 +39,12 @@ export const Container = styled.section`
     }
   }
   @media (max-width: 1100px) {
-    width: 90%;
+    width: 95%;
   }
   @media (max-width: 700px) {
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: smaller;
     .details {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem;

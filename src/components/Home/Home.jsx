@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <Container>
       <header>
-        <h1>IP Adress Tracker</h1>
+        <h1>IP Address Tracker</h1>
         <Input onSearch={searchHandler} />
       </header>
       <Details />

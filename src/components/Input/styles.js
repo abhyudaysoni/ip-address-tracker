@@ -30,6 +30,10 @@ export const Container = styled.div`
     }
   }
   @media (max-width: 700px) {
-    width: 80%;
+    width: 100%;
+    border-radius: 10px;
+    input {
+      font-size: 1rem;
+    }
   }
 `;

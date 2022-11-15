@@ -20,5 +20,9 @@ export const Container = styled.main`
     h1 {
       font-size: 1.5rem;
     }
+    header {
+      padding: 1rem;
+      height: 230px;
+    }
   }
 `;
