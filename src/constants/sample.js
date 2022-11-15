@@ -1,12 +1,21 @@
 export const sample = {
   ip: "8.8.8.8",
-  location: { country: "US", region: "California", timezone: "-08:00" },
+  location: {
+    country: "US",
+    region: "California",
+    city: "Mountain View",
+    lat: 37.38605,
+    lng: -122.08385,
+    postalCode: "94035",
+    timezone: "-08:00",
+    geonameId: 5375480,
+  },
   domains: [
-    "dibamovies.homes",
-    "mospooort.com",
-    "mossahamat.com",
-    "mouqawiloun.com",
-    "mouqawiloun.ma",
+    "profit-usa.com",
+    "proyectohidro.duckdns.org",
+    "0755.pics",
+    "0xbadc0.de",
+    "1024.me",
   ],
   as: {
     asn: 15169,
@@ -16,4 +25,5 @@ export const sample = {
     type: "Content",
   },
   isp: "Google LLC",
+  proxy: { proxy: false, vpn: false, tor: false },
 };

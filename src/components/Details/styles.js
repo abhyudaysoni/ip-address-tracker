@@ -10,7 +10,7 @@ export const Container = styled.section`
   height: fit-content;
   background: white;
   border-radius: 30px;
-  box-shadow: 0 0 1000px #bfbfbf;
+  box-shadow: 0 0 10px #bfbfbf;
   padding: 3rem;
   z-index: 5;
   position: relative;

@@ -5,7 +5,6 @@ import { Container } from "./styles";
 
 const Details = () => {
   const data = useSelector((state) => state.data.data);
-  console.log(data);
   return (
     <Container>
       {!data && (

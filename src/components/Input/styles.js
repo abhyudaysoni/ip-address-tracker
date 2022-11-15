@@ -9,8 +9,6 @@ export const Container = styled.div`
   border-radius: 20px;
   justify-content: space-between;
   overflow: hidden;
-  z-index: 10;
-  position: relative;
   input {
     height: 100%;
     width: 100%;

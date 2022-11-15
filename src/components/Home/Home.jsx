@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Container } from "./styles";
 import Input from "../Input/Input";
 import Details from "../Details/Details";
@@ -6,28 +6,33 @@ import Map from "../Map/Map";
 import { url } from "../../constants/url";
 import { useDispatch, useSelector } from "react-redux";
 import { setData } from "../../store/data-slice";
-import { setIp } from "../../store/input-slice";
 import { sample } from "../../constants/sample";
+import { changeInput } from "../../store/input-slice";
 
 const Home = () => {
   const dispatch = useDispatch();
   const searchInput = useSelector((state) => state.searchInput.search);
-  const ip = useSelector((state) => state.searchInput.ip);
   const searchHandler = () => {
-    dispatch(setIp(searchInput));
     getData();
   };
-  const getData = useCallback(() => {
-    fetch(`${url}ipAddress=${ip ? ip : "8.8.8.8"}`)
+  const getData = () => {
+    fetch(`${url}ipAddress=${searchInput}`)
       .then((res) => res.json())
       .then((data) => {
+        if (data.code === 422) {
+          dispatch(changeInput(""));
+          throw new Error("Enter Correct IP");
+        }
         dispatch(setData(data));
+        console.log(data);
+      })
+      .catch((err) => {
+        alert(err.message);
       });
-  }, [ip, dispatch]);
+  };
   useEffect(() => {
-    // getData();
     dispatch(setData(sample));
-  }, [dispatch, getData]);
+  }, [dispatch]);
   return (
     <Container>
       <header>
