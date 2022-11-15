@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Container } from "./styles";
 import Input from "../Input/Input";
 import Details from "../Details/Details";
-import Map from "../Map/Map";
+import MapPage from "../Map/Map";
 import { url } from "../../constants/url";
 import { useDispatch, useSelector } from "react-redux";
 import { setData } from "../../store/data-slice";
@@ -24,7 +24,6 @@ const Home = () => {
           throw new Error("Enter Correct IP");
         }
         dispatch(setData(data));
-        console.log(data);
       })
       .catch((err) => {
         alert(err.message);
@@ -40,7 +39,7 @@ const Home = () => {
         <Input onSearch={searchHandler} />
       </header>
       <Details />
-      <Map />
+      <MapPage />
     </Container>
   );
 };
